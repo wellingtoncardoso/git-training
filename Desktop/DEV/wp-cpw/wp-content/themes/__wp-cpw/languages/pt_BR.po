@@ -1,0 +1,165 @@
+# Blank WordPress Pot
+# Copyright 2014 ...
+# This file is distributed under the GNU General Public License v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Blank WordPress Pot v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2023-01-11 18:02-0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: Your Team <translations@example.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 3.1\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ops! Essa página não pode ser encontrada."
+
+#: functions.php:29
+msgid "Menu Main"
+msgstr "Menu Principal"
+
+#: home.php:12
+msgid "List of articles"
+msgstr "Lista dos Arquivos"
+
+#: inc/custom-posts.php:6 inc/custom-posts.php:7 page-home.php:120
+msgid "Timeline"
+msgstr "Linha do tempo"
+
+#: inc/custom-posts.php:8 inc/custom-posts.php:9
+msgid "Add New Timeline"
+msgstr ""
+
+#: inc/custom-posts.php:10
+msgid "Edit Timeline"
+msgstr ""
+
+#: inc/custom-posts.php:11
+msgid "New Timeline"
+msgstr ""
+
+#: inc/custom-posts.php:12
+msgid "All Timelines"
+msgstr ""
+
+#: inc/custom-posts.php:13
+msgid "View Timeline"
+msgstr ""
+
+#: inc/custom-posts.php:14
+msgid "Search Timeline"
+msgstr ""
+
+#: inc/custom-posts.php:15
+msgid "Timeline Image"
+msgstr ""
+
+#: inc/custom-posts.php:16
+msgid "Add Image"
+msgstr ""
+
+#: inc/custom-posts.php:20
+msgid "Keep our timelines add data to the timeline"
+msgstr ""
+
+#: inc/widgets.php:8
+msgid "Footer 1 Columns"
+msgstr ""
+
+#: inc/widgets.php:10
+msgid "Footer First Column"
+msgstr ""
+
+#: inc/widgets.php:19
+msgid "Footer 2 Columns"
+msgstr ""
+
+#: inc/widgets.php:21
+msgid "Footer Secondary Column"
+msgstr ""
+
+#: inc/widgets.php:32
+msgid "Aside page single"
+msgstr ""
+
+#: inc/widgets.php:34
+msgid "Page single"
+msgstr ""
+
+#: index.php:6
+msgid "List Of Articles"
+msgstr ""
+
+#: page-home.php:23
+msgid "Photo Perfil Cardoso Wellington"
+msgstr "Foto de perfil Wellington Cardoso"
+
+#: page-home.php:30
+msgid "WhatsApp"
+msgstr ""
+
+#: page-home.php:31
+msgid "Contact Me"
+msgstr "Contato"
+
+#: page-home.php:42
+msgid "About me"
+msgstr "Sobre mim"
+
+#: page-home.php:51
+msgid "Academic Formation"
+msgstr "Formação Acadêmica"
+
+#: page-home.php:66
+msgid "Extras"
+msgstr ""
+
+#: page-home.php:85
+msgid "Setup"
+msgstr ""
+
+#: page-home.php:105
+msgid "Settings"
+msgstr "Configurações"
+
+#: page-home.php:150
+msgid "Fun facts"
+msgstr "Especialidades"
+
+#: page-home.php:157
+msgid "Hours"
+msgstr "Horas"
+
+#: page-home.php:168
+msgid "Customers"
+msgstr "Clientes"
+
+#: page-home.php:179
+msgid "Country"
+msgstr "País"
+
+#: page-home.php:190
+msgid "Coffee"
+msgstr "Café"
+
+#: template-parts/content-article.php:31 template-parts/content.php:17
+msgid "Nothing yet to be displayed!"
+msgstr "Nada ainda a ser exibido!"
+
+#: template-parts/footer.php:13
+msgid "&copy; "
+msgstr ""

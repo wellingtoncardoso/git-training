@@ -1,0 +1,1 @@
+(self.webpackChunkwp_cpw=self.webpackChunkwp_cpw||[]).push([[664],{664:()=>{document.querySelector("#checkbox").addEventListener("change",(function(){document.body.classList.toggle("theme-light")}))}}]);

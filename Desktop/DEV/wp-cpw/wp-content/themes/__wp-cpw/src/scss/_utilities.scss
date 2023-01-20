@@ -1,0 +1,216 @@
+@use 'sass:math';
+
+$global__utilities: (
+    // padding
+    "padding" : (
+        "prefix" : "p",
+        "values" : (
+            "0" : 0,
+            "1" : $global__padding,
+            "2" : $global__padding * 2,
+            "3" : $global__padding * 4,
+            "4" : $global__padding * 6,
+        ),
+    ),
+    "padding-right" : (
+        "prefix" : "pr",
+        "values" : (
+            "0" : 0,
+            "1" : $global__padding,
+            "2" : $global__padding * 2,
+            "3" : $global__padding * 4,
+            "4" : $global__padding * 6,
+        ),
+    ),
+    "padding-bottom" : (
+        "prefix" : "pb",
+        "values" : (
+            "0" : 0,
+            "1" : $global__padding,
+            "2" : $global__padding * 2,
+            "3" : $global__padding * 4,
+            "4" : $global__padding * 6,
+        ),
+    ),
+    "padding-left" : (
+        "prefix" : "pl",
+        "values" : (
+            "0" : 0,
+            "1" : $global__padding,
+            "2" : $global__padding * 2,
+            "3" : $global__padding * 4,
+            "4" : $global__padding * 6,
+        ),
+    ),
+    "padding-top" : (
+        "prefix" : "pt",
+        "values" : (
+            "0" : 0,
+            "1" : $global__padding,
+            "2" : $global__padding * 2,
+            "3" : $global__padding * 4,
+            "4" : $global__padding * 6,
+        ),
+    ),
+    // margin
+    "margin" : (
+        "prefix" : "m",
+        "values" : (
+            "auto" : 0 auto, 
+            "0" : 0,
+            "1" : $global__margin,
+            "2" : $global__margin * 2,
+            "3" : $global__margin * 4,
+            "4" : $global__margin * 6,
+        ),
+    ),
+    "margin-right" : (
+        "prefix" : "mr",
+        "values" : (
+            "0" : 0,
+            "1" : $global__margin,
+            "2" : $global__margin * 2,
+            "3" : $global__margin * 4,
+            "4" : $global__margin * 6,
+        ),
+    ),
+    "margin-bottom" : (
+        "prefix" : "mb",
+        "values" : (
+            "0" : 0,
+            "1" : $global__margin,
+            "2" : $global__margin * 2,
+            "3" : $global__margin * 4,
+            "4" : $global__margin * 6,
+        ),
+    ),
+    "margin-left" : (
+        "prefix" : "ml",
+        "values" : (
+            "0" : 0,
+            "1" : $global__margin,
+            "2" : $global__margin * 2,
+            "3" : $global__margin * 4,
+            "4" : $global__margin * 6,
+        ),
+    ),
+    "margin-top" : (
+        "prefix" : "mt",
+        "values" : (
+            "0" : 0,
+            "1" : $global__margin,
+            "2" : $global__margin * 2,
+            "3" : $global__margin * 4,
+            "4" : $global__margin * 6,
+        ),
+    ),  
+    // display
+    "display" : (
+        "prefix" : "display",
+        "values" : (
+            "none" : none,
+            "block" : block,
+            "flex" : flex,
+            "grid" : grid,
+            "inline" : inline,
+            "inline-block" : inline-block,
+            
+        ),
+    ),
+    // align item
+    "align-items" : (
+        "prefix": "align-items",
+        "values": (
+            "normal" : normal,
+            "center" : center,
+            "end" : end,
+            "start" :  start,
+            "reverse" : reverse,
+            "flex-end" : flex-end,
+            "flex-start" : flex-start,
+            "initial" : initial,
+        ),
+    ),
+    // justify content
+    "justify-content" : (
+        "prefix" : "justify",
+        "values" : (
+            "center" : center,
+            "between" : space-between,
+            "around" : space-around,
+            "end" : end,
+            "start" : start,
+            "reverse" : reverse,
+            "flex-end" : flex-end,
+            "flex-start" : flex-start,
+            "initial" : initial,
+        ),
+    ),
+    //font size
+    "font-size" : (
+        "prefix" : "font",
+        "values" : (
+            "sm" : $global__font-size-sm,
+            "md" : $global__font-size,
+            "lg" : $global__font-size-lg,
+            "xl" : $global__font-size-xl,
+            "xxl" : $global__font-size-xxl,
+        ),
+     ),
+     // font family
+     "font-family" : (
+        "prefix" : "family",
+        "values" : (
+            "primary" : $global__font-primary,
+            "secondary" : $global__font-secondary,
+            "text"      : $global__font-text,
+            "body"      :$global__font-body,
+        ),
+     ),
+     // boder radius
+     "border-radius" : (
+        "prefix" : "border",
+        "values" : (
+            "default" : $global__border-radius,
+            "none" : 0,
+            "xs" : math.div( $global__border-radius, 4 ),
+            "sm" : math.div( $global__border-radius, 2 ),
+            "lg" : $global__border-radius * 2,
+            "full" : 50%,
+        ),
+     ),
+     // opacity
+     "opacity" : (
+        "prefix" : "opacity",
+        "values" : (
+            "10" : .1,
+            "20" : .2,
+            "30" : .3,
+            "40" : .4,
+            "50" : .5,
+            "60" : .6,
+            "70" : .7,
+            "80" : .8,
+            "90" : .9,
+            "100" : 1,
+        ),
+     ),
+);
+
+// generate utility classes
+@each $property, $map in $global__utilities{
+    $prefix : map-get( $map, "prefix" );
+    $values : map-get( $map, "values" );
+
+    @each $k, $v in $values{
+        @if( $k == "default" ){
+            .#{$prefix}{
+                #{$property}: $v;
+            }
+        }@else{
+            .#{$prefix}-#{$k}{
+                #{$property}: $v;
+            }
+        }
+    }
+}

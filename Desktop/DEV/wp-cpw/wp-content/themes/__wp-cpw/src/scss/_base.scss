@@ -1,0 +1,487 @@
+// layout
+body{
+    background-color: $primary;
+    font-family: $global__font-body;
+}
+// hero 
+#hero{
+    padding: $global__padding * 3 0;
+    .hero__thumbnail{
+        img{
+            width: 100%;
+            max-width: 348px;
+            height: auto;
+            max-height: 348px;
+            display: block;
+            object-fit: cover;
+            border: 18px solid $secondary;
+            box-shadow: $global__box-shadow-circle;
+            @media screen and (max-width: 575px){
+                max-width: 280px;
+            }
+        }
+    }
+    .details{
+        p{
+            line-height: 22px;
+            font-weight: 300;
+            span{
+                font-weight: 600;
+            }
+        }
+        h1{
+            font-size: $global__font-size-xxl;
+            font-weight: 700;
+            span{
+                font-weight: 400;
+                font-size: $global__font-size;
+                strong{
+                    font-weight: 700;
+                    color: #FFF;
+                }
+            }
+        }
+        @media( max-width: 575px ){
+            padding-left: $global__padding;
+        }
+    }
+}
+// skills
+#skills{
+    .card{
+        box-shadow: none;
+        border: 0;
+        display: flex;
+        .card-details{
+            p{
+                font-size: $global__font-size - .25;
+            }
+        }
+    }
+}
+// fun facts
+#fun-facts{
+    .card{
+        text-align: center;
+        height: 160px;
+        .card-title{
+            h3{
+                font-size: $global__font-size-lg - .3;
+                text-align: center;
+            }
+            i{
+                color: $info;
+                margin-bottom: $global__margin;
+            }
+        }
+        .card-details{
+            p{
+                margin-bottom: $global__margin;
+                span{
+                    font-size: $global__font-size-xl;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+// timeline
+#timeline{
+    margin: 0 auto;
+    .card{
+        position: relative;
+        width: 100%;
+        max-width: 460px;
+        box-shadow: none;
+        &:nth-child( odd ){
+            padding: 30px 0 30px 30px;
+        }
+        &:nth-child( even ){
+            padding: 30px 30px 30px 0;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 50%;
+            border: solid $error;
+            z-index: 1;
+        }
+        &:nth-child( odd )::before{
+            left: 0;
+            top: -4.5px;
+            bottom: -4.5px;
+            border-width: 5px 0 5px 5px;
+            border-radius: 50px 0 0 50px;
+        }
+        &:nth-child( even )::before{
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-width: 5px 5px 5px 0;
+            border-radius: 0 50px 50px 0;
+        }
+        &:first-child::before{
+            border-top: 0;
+            border-top-left-radius: 0;
+        }
+        &:last-child:nth-child( odd ):before{
+            border-bottom: 0;
+            border-bottom-left-radius: 0;
+        }
+        &:last-child:nth-child( even )::before{
+            border-bottom: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:nth-child( even ) >  .content > .card-title{
+            h3{
+                text-align: right;
+            }
+        }
+        &:nth-child( odd ) > .content > .card-title{
+            h3{
+              &::before{
+                  left: -45px;
+              }  
+            }
+        }
+        &:nth-child( even ) > .content > .card-title{
+            h3{
+                &::before{
+                    right: -45px;
+                }
+            }
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            background-color: $primary;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .card-title{
+            h3{
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    background-color: #FFF;
+                    border-radius: 50px;
+                    border: 2px solid $error;
+                    z-index: 2;
+                }
+            }
+        }
+        .card-details{
+            p{
+                font-weight: 300;
+                line-height: 22px;
+                color: #FFF;
+                a{
+                    color: $info;
+                }
+            }
+        }
+    }
+}
+// footer
+footer{
+    .navbar-social{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        li{
+            a{
+                color: $details;
+                font-size: $global__font-size-sm;
+                text-decoration: none;
+                transition: .3s all;
+                &:hover{
+                    cursor: pointer;
+                    color: $info;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .copyright{
+        p{
+            color: $details;
+            font-size: $global__font-size-sm;
+            @media screen and (min-width: 576px){
+                float: right;
+            }
+        }
+    }
+}
+
+// error 404
+section{
+    &.error-404{
+        height: 100%;
+        min-height: 80vh;
+    }
+}
+
+// page blog
+article{
+    .card{
+        padding: 0;
+        .entry-header{
+            position: relative;
+            img{
+                width: 100%;
+                max-width: 100%;
+                max-height: 230px;
+                display: block;
+                object-fit: cover;
+                border-top-left-radius: $global__border-radius;
+                border-top-right-radius: $global__border-radius;
+            }
+            .header__float-category{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                .post-categories{
+                    background-color: rgba( 0,0,0,.7 );
+                    padding: $global__padding;
+                    border-radius: $global__border-radius;
+                    li{
+                        a{
+                            font-size: $global__font-size-sm;
+                            color: $details;
+                            text-decoration: none;
+                            transition: .3s all;
+                            &:hover{
+                                color: $info;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .card-body{
+            padding: $global__padding $global__padding * 2;
+            .entry-title{
+                h2{
+                    font-size: $global__font-size;
+                }
+            }
+            .entry-content{
+                p{
+                    font-size: $global__font-size - .15;
+                    font-weight: 400;
+                    margin-bottom: $global__margin;
+                    line-height: 22px;
+                }
+            }
+        }
+        a{
+            text-decoration: none;
+            color: #FFF;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// single
+.single{
+    h1{
+        font-size: $global__font-size-lg;
+    }
+    article{
+        p{
+            color: $details;
+            line-height: 22px;
+            margin-bottom: $global__margin;
+        }
+        .article-thumbnail{
+            img{
+                width: 100%;
+                height: 100%;
+                max-height: 450px;
+                display: block;
+                object-fit: cover;
+            }
+        }
+        .navigation{
+            display: none;
+        }
+    } 
+}
+
+// comments
+.commentlist{
+    .comment{
+        article{
+            .comment-meta{
+                color: $details;
+                line-height: 22px;
+                a{
+                    color: $info;
+                }    
+            }
+        }
+        .comment-content,
+        .reply{
+            line-height: 22px;
+            a{
+                color: $info;
+            }
+        }
+    }
+}
+#comments{
+    color: #FFF;
+    font-size: $global__font-size-lg;
+    margin-top: $global__margin * 2;
+    margin-bottom: $global__margin;
+}
+#respond{
+    color: $details;
+    #commentform{
+        p{
+            a{
+                color: $details;
+                text-decoration: underline;
+                transition: .3s all;
+                &:hover{
+                    cursor: pointer;
+                    color: $info;
+                }
+            }
+        }
+        .comment-form-comment{
+            display: block;
+            textarea{
+                width: 100%;
+                margin: $global__margin 0;
+                padding-left: .5rem;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .comment-form-author,
+        .comment-form-email,
+        .comment-form-url{
+            display: block;
+            input{
+                width: 100%;
+                max-width: 100%;
+                height: 38px;
+                padding-left: .5rem;
+                margin-top: $global__margin;
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        .form-submit{
+            input[type="submit"]{
+                padding: $global__padding;
+                border: $global__border-thickness - 1px solid #FFF;
+                background-color: transparent;
+                color: #FFF;
+                transition: .3s ease-in-out;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $info;
+                    border-color: $primary;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// aside
+aside{
+    .widget-wrapper{
+        h2{
+            color: #FFF;
+            font-size: $global__font-size-lg;
+            margin: $global__margin - .2 0;
+        }
+        .wp-block-categories-list{
+            display: inline;
+            .cat-item{
+                font-size: $global__font-size;
+                font-weight: 300;
+                padding: .2rem .5rem;
+                border: $global__border-thickness - 1px solid $details;
+                margin-right: .5rem;
+                margin-bottom: .5rem;
+                float: left;
+                a{
+                    color: #FFF;
+                    text-decoration: none;
+                    transition: .3s all;
+                    &:hover{
+                        color: $info;
+                    }
+                }
+            }
+        }
+    }
+    #sidebar{
+        h2{
+            color: #FFF;
+            font-size: $global__font-size-lg;
+            margin: $global__margin - .2 0;
+        }
+        ul{
+            li{
+                a{
+                    color: #FFF;
+                    font-size: $global__font-size;
+                    text-decoration: none;
+                    transition: .3s all;
+                    &:hover{
+                        cursor: pointer;
+                        color: $info;
+                    }
+                }
+            }
+        }
+        .wp-block-categories-list,
+        .categories{
+            ul{
+                display: inline;
+                .cat-item{
+                    color: #FFF;
+                    font-size: $global__font-size;
+                    font-weight: 300;
+                    padding-left: 0;
+                    padding-right: .2rem;
+                    margin-bottom: .5rem;
+                    float: left;
+                    &::after{
+                        position: relative;
+                        content: "|";
+                    }
+                    &:hover{
+                        color: $info;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// archive  
+.archive{
+    h1{
+        font-size: $global__font-size-lg;
+        &.archive-title{
+            span{
+                font-weight: 300;
+            }
+        }
+    }
+}

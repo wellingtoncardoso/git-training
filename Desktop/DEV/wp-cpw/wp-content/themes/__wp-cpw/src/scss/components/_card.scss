@@ -1,0 +1,30 @@
+.card{
+    display: block;
+    border: 0;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    box-shadow: $global__box-shadow-card;
+    background-color: $primary;
+    padding: $global__padding;
+    transition: 220ms all;
+    &:hover{
+        cursor: pointer;
+        box-shadow: none;
+    }
+    .card-title{
+        font-weight: 700;
+        padding-bottom: $global__padding;
+    }
+    .card-details{
+        p{
+            font-size: $global__font-size;
+            font-weight: 300;
+            line-height: 22px;
+        }
+    }
+    i{
+        font-size: $global__font-size-xl;
+        color: $details;
+    }
+}

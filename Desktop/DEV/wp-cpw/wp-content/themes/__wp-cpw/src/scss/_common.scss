@@ -1,0 +1,236 @@
+// titles
+.blog{
+    h1{
+        font-size: $global__font-size-xl
+    }
+}
+h2{
+    font-size: $global__font-size-lg;
+    font-weight: 700;
+    &.underline-color{
+        &::after{
+            content:"";
+            position: relative;
+            display: block;
+            width: 45px;
+            height: 3px;
+            background-color: $details;
+            margin-top: .2rem;
+        }
+    }
+}
+
+// paragraph
+p{
+    font-family: $global__font-text;
+}
+
+// bolds
+b,
+strong{
+    font-weight: 700;
+    color: $info;
+}
+
+//paginations
+.navigation{
+    &.pagination{
+        display: flex;
+        justify-content: center;
+        .nav-links{
+            .page-numbers{
+                padding: $global__padding - .3;
+                border: $global__border-thickness - 1px solid $details;
+                font-size: $global__font-size-sm;
+                color: #FFF;
+                text-decoration: none;
+                &.current{
+                    border: 0;
+                    background-color: $secondary;
+
+                }
+                &:first-child,
+                &:last-child{
+                    border: 0
+                }
+            }
+        }
+    }
+}
+
+// settings theme light
+#sidebar-top{
+    .checked__toggle{
+        .checked__icon{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        #checkbox{
+            opacity: 0;
+            position: absolute;
+        }
+    }
+}
+
+//back to
+.back-to{
+    position: relative;
+    a{
+        position: absolute;
+        right: 22px;
+        bottom: 44px;
+        width: 40px;
+        height: 40px;
+        background-color: $details;
+        border-radius: $global__border-radius;
+        color: $primary;
+    
+        cursor: pointer;
+        z-index: 5;
+        opacity: .7;
+        transition: .3s all;
+        &:hover{
+            opacity: 1;
+        }
+        &::after{
+            content: "▲";
+            font-size: $global__font-size-lg - .3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+        }
+    }
+}
+
+// theme light and dark on click
+.theme-light{
+    background-color: #FFF !important;
+    #sidebar-top{
+        .checked__toggle{
+            .checked__icon{
+                i{
+                    color:#000;
+                }
+            }
+        }
+    }
+    h1{
+        color: #000 !important;
+        strong{
+            color: #000 !important
+        }
+    }
+    h2,h3,a,
+    p{
+        color: #000 !important;
+        strong{
+            color: #000 !important;
+            a{
+                color: #000 !important;
+            }
+        }
+    }
+    h2{
+        &.underline-color{
+            &::after{
+                background-color: #000 !important;
+            }
+        }
+    }
+    .navigation {
+        ul{
+            li{
+                a{
+                    .btn-prices{
+                        border-color: $primary !important;
+                        background-color: $info !important;
+                        color: $primary !important;
+                    }
+                }
+            }
+        }
+        .navbar-mobile{
+            div{
+                background-color: $primary !important;
+            }
+        }
+        .navbar-mobile{
+            &.active{
+                .line1,
+                .line3{
+                    background-color: #FFF !important;
+                }
+            }
+        }
+    }
+    .navigation__item-logo{
+        a{
+            .item-logo__span{
+                background-color: #000 !important;
+            }
+        }
+        .text-details{
+            color: #000 !important;
+        }
+    }
+    #hero{
+        .hero__thumbnail{
+            img{
+                border-color: #000 !important;
+                box-shadow: $global__box-shadow-circle-light !important;
+            }
+        }
+    }
+    .btn-outlined-white{
+        border-color: #000 !important;
+    }
+    .btn-secondary{
+        background-color: $info !important;
+    }
+    .btn-secondary-hover{
+        border-color: $info !important;
+        &:hover{
+            background-color: transparent !important;
+        }
+    }
+    .card{
+        background-color: #FFF !important;
+        .content{
+            background-color: #FFF !important;
+        }
+        h3,
+        .card-title,
+        .card-details{
+            color: #000 !important;
+        }
+    }
+    #timeline{
+        .card{
+            &::before{
+                border-color: $info !important;
+            }
+            .card-title{
+                h3{
+                    &::before{
+                        border-color: $info !important;
+                    }
+                }
+            }
+        }
+    }
+    #fun-facts{
+        .card{
+            box-shadow: 15px 15px 30px rgb(187, 185, 185), -15px -15px 30px rgb(170, 170, 170) !important;
+            &:hover{
+                box-shadow: none !important;
+            }
+            .card-title{
+                i{
+                    color: $error !important;
+                }
+            }
+        }
+    }
+}

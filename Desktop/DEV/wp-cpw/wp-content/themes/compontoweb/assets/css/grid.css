@@ -1,0 +1,183 @@
+/*
+*columns
+*/
+.cpw-container_full,
+.cpw-container{
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  /*media screen*/
+  @media screen and (min-width: 1400px){
+    .cpw-container{
+      max-width: 1200px;
+    }
+  }  
+  @media screen and (max-width: 1199px){
+    .cpw-container{
+      max-width: 1140px;
+    }
+  }
+  @media screen and (max-width: 991px){
+    .cpw-container{
+      max-width: 960px;
+    } 
+  }
+  @media screen and (max-width: 767px){
+    .cpw-container{
+      max-width: 720px;
+    } 
+  }
+  @media screen and (max-width: 575px){
+    .cpw-container{
+      max-width: 540px;
+    } 
+  }
+
+/*
+*row
+*/
+.cpw-row{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+/*
+*columns
+*/
+.cpw-col{
+  flex: 0 0 auto;
+  margin-top: .5rem;
+  padding-right: 6px;
+  padding-left: 5px;
+}
+  /*media screen*/
+  @media screen and (min-width: 1400px){
+    .cpw-col{
+      width: 20%;
+    }
+  }
+  @media screen and (max-width: 1199px){
+    .cpw-col{
+      width: 25%;
+    }
+  }
+  @media screen and (max-width: 991px){
+    .cpw-col{
+      width: 33.3333333333%;
+    } 
+  }
+  @media screen and (max-width: 767px){
+    .cpw-col{
+      width: 50%;
+    } 
+  }
+  @media screen and (max-width: 575px){
+    .cpw-col{
+      width: 100%;
+    } 
+  }
+
+/*
+*grids add
+*/
+.cpw-col-1{
+  width: 8.3333333333%;
+}
+.cpw-col-2{
+  width: 9.09090909091%;
+}
+.cpw-col-3{
+  width: 10%;
+}
+.cpw-col-4{
+  width: 11.1111111111%;
+}
+.cpw-col-5{
+  width: 12.5%;
+}
+.cpw-col-6{
+  width: 14.285714285%;
+}
+.cpw-col-7{
+  width: 16.666666667%
+}
+.cpw-col-8{
+  width: 20%;
+}
+.cpw-col-9{
+  width: 25%;
+}
+.cpw-col-10{
+  width: 33.333333333%;
+}
+.cpw-col-11{
+  width: 50%;
+}
+.cpw-col-12{
+  width: 100%;
+}
+
+/*
+*grid-container
+*/
+.cpw-grid-container{
+  height: 100vh;
+  display: grid;
+
+  /*setting the templates*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas:
+    "slide slide slide slide"
+    "main main main main";
+  grid-gap: 0rem;
+}
+@media only screen and (max-width: 767px){
+  .cpw-grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+      "slide"
+      "main";
+  }
+}
+
+/*
+*flex
+*/
+.cpw-flex{
+  display: flex;
+}
+.cpw-justify-between{
+  justify-content: space-between;
+}
+.cpw-justify-around{
+  justify-content: space-around;
+}
+.cpw-justify-center{
+  justify-content: center;
+}
+
+/*
+*aling
+*/
+.cpw-align-center{
+  align-items: center;
+}
+.cpw-align-flex-end{
+  align-items: flex-end;
+}
+.cpw-align-flex-start{
+  align-items: flex-start;
+}
+.cpw-align-stretch{
+  align-items: stretch;
+}

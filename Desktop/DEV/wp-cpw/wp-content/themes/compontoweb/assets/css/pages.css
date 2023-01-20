@@ -1,0 +1,43 @@
+/*
+*grid frontpage
+*/
+/* slide */
+#slide img{
+  max-width: 1024px;
+  object-fit: cover;
+}
+@media only screen and (max-width: 1400px){
+  #slide img{
+    max-width: 738px;
+  }
+}
+@media only screen and (max-width: 575px){
+  #slide img{
+    max-width: 380px;
+  }
+}
+
+/* main */
+#main h1,
+#main h2{
+  color: var(--blackLight);
+}
+#main h1{
+  font-size: 3rem;
+  margin-top: 0px;
+}
+#main h2{
+  font-size: 1.5rem;
+  margin-bottom: 0px;
+  text-transform:initial;
+}
+@media only screen and (max-width: 575px){
+  #main h1{
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (max-width: 575px){
+  #main h2{
+    font-size: 1rem;
+  }
+}
