@@ -1,0 +1,82 @@
+/* theme fonts  */
+@font-face{
+    font-family: 'Qanelas Regular' ;
+    src:    local( 'Qanelas Regular' ), 
+            local( 'Qanelas-Regular' ), 
+            url( '../fonts/Qanelas-Regular.ttf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Qanelas Medium' ;
+    src:    local( 'Qanelas Medium' ), 
+            local( 'Qanelas-Medium' ), 
+            url( '../fonts/Qanelas-Medium.ttf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Qanelas SemiBold' ;
+    src:    local( 'Qanelas SemiBold' ), 
+            local( 'Qanelas-SemiBold' ), 
+            url( '../fonts/Qanelas-SemiBold.ttf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face{
+    font-family: 'Qanelas Bold' ;
+    src:    local( 'Qanelas Bold' ), 
+            local( 'Qanelas-Bold' ), 
+            url( '../fonts/Qanelas-Bold.ttf' );
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* fonts */
+$font__regular: 'Qanelas Regular';
+$font__medium: 'Qanelas Medium';
+$font__semibold: 'Qanelas SemiBold';
+$font__bold: 'Qanelas Bold';
+
+/* Theme colors */
+$primary: #FFF !default;
+$secondary: #0d3470 !default;
+$error: red !default;
+
+/* Colors patener */
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "black": #585858,
+);
+
+//rgba
+$global__rgba-primary: rgba( 13,52,112,.7 ) !default;
+
+// font size
+$global__font-size: 1rem !default;
+$global__font-size-sm: .75rem !default;
+$global__font-size-md: $global__font-size * .75 !default;
+$global__font-size-lg: $global__font-size * 1.5 !default;
+$global__font-size-xl: $global__font-size * 2 !default;
+$global__font-size-xxl: $global__font-size * 3 !default;
+$global__font-size-xxxl: $global__font-size * 4 !default;
+
+// border radius
+$global__border-radius: 30px !default;
+$global__border-radius-full: 50% !default;
+$global__border-thickness: 2px !default;
+
+// spacing
+$global__margin: .75rem !default;
+$global__padding: .75rem !default;
+
+// box shadow
+$global__box-shadow: 1px 3px 5px rgba( 0,0,0,.1 ) !default;
+$global__box-shadow-secondary: 1px 3px 5px rgba( 13,52,112,3 ) !default;
+
+

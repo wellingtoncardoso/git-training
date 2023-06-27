@@ -1,0 +1,1 @@
+(self.webpackChunkwp_cpw=self.webpackChunkwp_cpw||[]).push([[695],{695:()=>{document.querySelectorAll(".accordion-item__header").forEach((e=>{e.addEventListener("click",(t=>{e.classList.toggle("active");const c=e.nextElementSibling;e.classList.contains("active")?c.style.maxHeight=c.scrollHeight+"px":c.style.maxHeight=0}))}))}}]);

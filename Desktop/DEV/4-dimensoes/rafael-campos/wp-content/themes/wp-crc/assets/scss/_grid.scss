@@ -1,0 +1,84 @@
+@use 'sass:math';
+
+//variables
+$global__grid-columns: 12;
+$global__grid-gaps: (
+    "0" : 0,
+    "1" : 10px,
+    "2" : 20px,
+    "3" : 30px,
+    "4" : 40px, 
+);
+$global__layout-values: flex-start, flex-end, center, space-between, space-around; 
+
+// base layout classes
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// columns classes
+@include xs{
+    @for $i from 1 through $global__grid-columns{
+        .col-#{$i}-xs{
+            flex-grow: 0;
+            width: math.div( $i * 100%, $global__grid-columns );
+        }
+    }
+}
+@include sm{
+    @for $i from 1 through $global__grid-columns{
+        .col-#{$i}-sm{
+            flex-grow: 0;
+            width: math.div( $i * 100%, $global__grid-columns );
+        }
+    }
+}
+@include md{
+    @for $i from 1 through $global__grid-columns{
+        .col-#{$i}-md{
+            flex-grow: 0;
+            width: math.div( $i * 100%, $global__grid-columns );
+        }
+    }
+}
+@include lg{
+    @for $i from 1 through $global__grid-columns{
+        .col-#{$i}-lg{
+            flex-grow: 0;
+            width: math.div( $i * 100%, $global__grid-columns );
+        }
+    }
+}
+@include xl{
+    @for $i from 1 through $global__grid-columns{
+        .col-#{$i}-xl{
+            flex-grow: 0;
+            width: math.div( $i * 100%, $global__grid-columns );
+        }
+    }
+}
+
+// grid gaps
+@each $key, $val in $global__grid-gaps{
+    .gap-#{$key} > *{
+        padding: $val;
+    }
+    .gap-#{$key}{
+        margin-right: -$val;
+        margin-left: -$val;
+    }
+}
+
+// jsutify content classes
+@each $key, $val in $global__layout-values{
+    .justify-#{$key}{
+        justify-content: $val;
+    }
+}
